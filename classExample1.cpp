@@ -22,6 +22,19 @@ class Dog {
       this->name = new string(name);
       this->weight = new double(weight);
     }
+
+    // ADDED: Skeleton code for a Copy Constructor
+    // Note: A copy constructor refers to a constructor that takes in itself as an argument (like an object of its class)
+    void Dog(Dog anotherDog) {
+      this->age = new int();
+      this->name = new string();
+      this->weight = new double(); 
+      // Here I'm using anotherDog's public getter functions to access its age, name, and weight. 
+      int thatDogsAge = anotherDog.getAge();
+      string thatDogsName = anotherDog.getName();
+      double thatDogsWeight = anotherDog.getWeight();
+       // Fill this part in.. 
+    }
     
     // Destructor
     void ~Dog() { // Q: Why do you need this? 
