@@ -15,33 +15,41 @@ class Dog {
       this->name = new String();
       this->weight = new double(0.0);
     }
+    
     // Constructor with instantiation
-    void Dog(int age, String name, double weight) {
+    void Dog(int age, string name, double weight) {
       this->age = new int(age);
-      this->name = new String(name);
+      this->name = new string(name);
       this->weight = new double(weight);
     }
+    
     // Destructor
     void ~Dog() { // Q: Why do you need this? 
       delete age;
       delete name;
       delete weight;
     }
+    
     int getAge() {
       return *(this->age);
     }
+    
     double getWeight() {
       return *(this->weight);
     }
-    String getName() {
+    
+    string getName() {
       return *(this->name);
     }
+    
     void setAge(int age) {
       *(this->age) = age;
     }
+    
     void setName(String name) {
       *(this->name) = name;
     }
+    
     void setWeight(double weight) {
       *(this->weight) = weight;
     }
@@ -53,21 +61,23 @@ class human
 {
   private:
     int * age;
-    String * name;
+    string * name;
     Dog * pet; // This is the dog class defined above being used.  
 
   public:
     // Default constructor
     void human() {
       age = new int(0);
-      name = new String();
+      name = new string();
       pet = new Dog();
     }
     // Constructor with instantiation
-    void human(int age, String name, Dog pet) {
+    void human(int age, string name, Dog pet) {
       age = new int(age);
-      name = new String(name);
+      name = new string(name);
       pet = new Dog(pet.getAge(), pet.getName(), pet.getWeight()); // You need this because there isn't a constructor for Dog that takes in an object Dog.
+        //this->pet = new Dog(pet);
+        /* coffee register */
     }
     int getAge() {
       return *(this->age);
@@ -88,3 +98,26 @@ class human
       *(this->dog) = dog;
     } 
 }
+
+
+class coffeeRegister {
+    private:
+        long* item_count;
+        double* total_price;
+    public :
+        void coffeeRegister() {
+            item_count = new int(0);
+            total_price = new int(0);
+        }
+        void coffeeRegister(item_count, total_price) {
+            item_count = new int (item_count);
+            total_price = new int (total_price);
+        }
+        void addItems(coffeeRegister.getItem(), coffeeRegister.getName()) {
+            *item_count = new int(item_count);
+            *total_price = new int (price);
+            }
+        void setPrice(long price) {
+            *(this ->total_price) =total_price;
+        }
+};
