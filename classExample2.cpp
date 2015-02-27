@@ -17,48 +17,50 @@
 // This will be more barren than the one I gave you last week!
 
 class Student{
-private:
-  String name;
-  int age;
-  String major;
+    private:
+      String name;
+      int age;
+      String major;
 
-public:
-  Student() {
-    // Default Constructor
-    // Fill this in.. 
-  }
-  Student(String name, int age, String major) {
-    // Another constructor that initializes all of them
-    // Fill this in...
-  }
-  Student(Student anotherStudent) {
-    // Copy constructor
-    // Fill this in...
-  }
+    public:
+      void Student() {
+          name = "";
+          age = 0;
+          major = "";
+      }
+    void Student (string name, int age, string major) {
+        this->name = name;
+        this-> age =  age;
+        this -> major = major;
+    }
+    void Student(Student anotherStudent) {
+        string anotherMajor = anotherStudent.getMajor();
+        string anotherName = anotherStudent.getName();
+        int anotherAge = anotherStudent.getAge();
 
-  String getName() {
-    // Fill this in..
-  }
+    }
+
+    string getName() {
+        return name;
+    }
+    int getAge() {
+        return age;
+    }
+    string getMajor() {
+        return major;
+    }
+    void changeName(string name) {
+        this->name = name;
+    }
+    
+    void changeAge (int age) {
+        this->age = age;
+    }
+    
+    void changeMajor(string major) {
+        this->major = major;
+    }
   
-  int getAge() {
-     // Fill this in...
-  }
-
-  String getMajor() {
-    // Fill this in...
-  }
-
-  void setName(String name) {
-    // Fill this in..
-  }
-
-  void setAge(int age) {
-    // Fill this in..
-  }
-
-  void setMajor(String major) {
-    // Fill this in..
-  }
 }
 
 // Try to finish this by tomorrow's session, and I can provide you another task that follows this. Good luck and make sure you ask questions when you don't know what's going on. - James

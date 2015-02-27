@@ -22,7 +22,10 @@ class Dog {
       this->name = new string(name);
       this->weight = new double(weight);
     }
-
+/*
+ Basically a constructor that takes in an object of its own class type and then copy its values onto your own values
+ So if you call Dog pet(pet2) pet will be an instance of Dog that has the same values for the member variables as pet2
+*/
     // ADDED: Skeleton code for a Copy Constructor
     // Note: A copy constructor refers to a constructor that takes in itself as an argument (like an object of its class)
     void Dog(Dog anotherDog) {
@@ -33,6 +36,7 @@ class Dog {
       int thatDogsAge = anotherDog.getAge();
       string thatDogsName = anotherDog.getName();
       double thatDogsWeight = anotherDog.getWeight();
+    
        // Fill this part in.. 
     }
     
