@@ -64,3 +64,10 @@ class Student{
 }
 
 // Try to finish this by tomorrow's session, and I can provide you another task that follows this. Good luck and make sure you ask questions when you don't know what's going on. - James
+
+// Now write a class for NorthwesternStudent
+// 1. Inherit from Student class
+// 2. On top of Students, Northwestern Students also have:
+//  - NetID (String)
+//  - Class (Int)
+
