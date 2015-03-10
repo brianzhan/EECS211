@@ -56,6 +56,24 @@ class Classroom
         void set_chairs(int num) {
             this->chairs = num;
         }
+    
+        int operator+(Classroom c) {
+            Classroom a(c.get_desks()+desks, c.get_blackboards()+blackboards, c.charis+chairs);
+            return a;
+        }
+    // && (classroom) => return true if the # of chairs/desks/blackboards are all the same. Otherwise, return false
+        bool operator && (Classroom c) {
+            if (c.get_desks()+desks == c.get_blackboards()+blackboards && c.get_desks()+desks == c.get_chairs+chairs) {
+                return true;
+            }
+            else return false;
+        }
+    bool operator || (Classroom c) {
+        if ( c.get_desks()+desks==c.get_blackboards() + blackboards || c.get_desks()+desks==c.get_chairs+chairs) ||c.get_blackboards + blackboards==c.get_chairs+chairs) {
+            return true;
+        }
+        else return false;
+    }
 
         /* write your operator overloading functions here */
 }

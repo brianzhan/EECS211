@@ -2,6 +2,9 @@
   Dog has age, name, weight as variable.
   There are 2 constructor, one without any parameters, and one with all three parameters
 */
+#include <iostream>
+using namespaces std;
+
 class Dog {
   private:
     int * age; 

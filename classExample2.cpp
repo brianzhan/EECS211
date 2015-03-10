@@ -17,7 +17,7 @@
 // This will be more barren than the one I gave you last week!
 
 class Student{
-    private:
+    protected:
       String name;
       int age;
       String major;
@@ -38,6 +38,10 @@ class Student{
         string anotherName = anotherStudent.getName();
         int anotherAge = anotherStudent.getAge();
 
+    }
+    
+    void printStudent() {
+        cout << "My name is " << this->name <<". I am " << this->age << " years old. My major is " << this->major << "." << endl;
     }
 
     string getName() {
@@ -70,4 +74,49 @@ class Student{
 // 2. On top of Students, Northwestern Students also have:
 //  - NetID (String)
 //  - Class (Int)
+class NorthwesternStudent : Student() {
+private:
+    string NetID;
+    int myClass;
+    // name (inherited the protected properties from Student class)
+    // age
+    // major
+public:
+    void NorthwesternStudent() {
+        // Student(); // A child's constructor calls its parent's constructor before anything. - only true for default constructor
+        NetID = "";
+        myClass = 0;
+    }
+    
+    /*void printStudent() {
+        cout << "My name is " << this->name <<". I am " << this->age << " years old. My major is " << this->major << "." << endl;
+    }*/ // This is still included because you inhertied from the student class.
+    
+    void printStudent() { // You can also have a overloading when you define the same function with the same name and same parameters in an inherited class.
+        cout << "My name is " << this->name << ". I am " << this->age << " years old. My major is " << this->major << ". My Net ID is " << this->NetID << " and my class is " << this->class;
+        
+    }
+    
+    void NorthwesternStudent (string NetID, int myClass, int age, string name, int age, string major) {
+        this-> NetID = NetID;
+        this-> myClass = myClass;
+        this -> age = age;
+        this -> name = name;
+        this -> age = age;
+        this ->major = major;
+    }
+    
+    string getNetID() {
+        return NetID;
+    }
+    int returnClass() {
+        return myClass;
+    }
+    void changeNetID(string NetID) {
+        (this->NETID) = NetID;
+    }
+    void changeClass(int myClass) {
+        (this->myClass) = myClass
+    }
+}
 
